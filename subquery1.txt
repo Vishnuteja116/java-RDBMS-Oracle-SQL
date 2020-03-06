@@ -1,0 +1,13 @@
+
+SELECT id, last_name
+    FROM employee
+    WHERE id <=ALL
+      (SELECT id
+       FROM employee where city='Vancouver');
+       
+   
+SELECT id, last_name,salary,description
+    FROM employee emp
+    WHERE salary >=
+      (SELECT avg(salary)
+       FROM employee emp1 where emp1.description=emp.description); 

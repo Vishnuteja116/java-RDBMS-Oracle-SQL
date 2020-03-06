@@ -1,3 +1,4 @@
+
 inner join
 select ename,e.eid,d.eid,dname 
 from emp541 e,dept541 d
@@ -18,11 +19,7 @@ select ename,dname,e.eid,d.eid
 from emp541 e full outer join dept541 d
 on e.eid=d.eid;
 ///
-cross join
-cross product of two tables
-select ename,dname,e.eid,d.eid
-from emp541 e cross join dept541 d
-on e.eid=d.eid;
+
 ////
 self join
 joining a table with itself
@@ -30,6 +27,12 @@ hierarchical query
 select e1.ename||'works for'||e2.ename "Emloyees and
 their managers" from emp541 e1,emp541 e2
 where e1.mid=e2.eid
+
+2 standards of sql
+sql 99
+sql 92
+error command not properly ended where sql 99
+successfuly on sql 92
 
 
 

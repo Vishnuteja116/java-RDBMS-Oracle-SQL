@@ -1,0 +1,21 @@
+create function supplier_counts
+return number is
+total number :=0;
+begin
+select count(*) into total 
+from suppliers 
+return total
+end 
+
+declare 
+c number
+begin
+c:=supplier_counts();
+dbms_output.put_line('total no of counts:'||c);
+end 
+
+set serveroutput ON
+
+
+
+

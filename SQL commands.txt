@@ -1,0 +1,168 @@
+
+DDL
+
+create- create table table_name(column name datatype)
+
+create a table without primary key column 
+
+eg-
+CREATE TABLE customers
+( customer_id number(10) NOT NULL,
+  customer_name varchar2(50) NOT NULL,
+  customer_city varchar2(50)
+);
+
+
+Alter -alter table tablename add columnname datatype
+
+eg-alter table customers add customer_productorder  varchar(30)
+
+
+alter table tablename add (columnname1 datatype,columnname2  datatype)
+
+alter table tablename modify customer_name varchar2(100) not null
+
+alter table tablename drop column columnname 
+
+alter table tablename RENAME COLUMN oldcolumnname to newcolumname
+
+alter table existingtablename rename to newtablename
+
+alter table tablename enable/disable constraint constraint_name
+
+alter table tablename add/drop constraint constraintname 
+
+
+drop-drop table tablename 
+
+drop table tablename cascade constraint 
+
+select * from recyclebin 
+
+flashback table tabelname to before drop
+
+drop table tablename Purge
+
+truncate-truncate table tablename 
+
+
+select * from tablename 
+
+select columnname from tablename 
+
+select * from tablename where columnname=value
+
+select * from tablename where columname is not null
+
+select * from tablename where columnname in (values)
+
+SELECT * from tablename where columnname between value1 and value2
+
+SELECT * from tablename where columnname not between value1 and value2
+
+SELECT * from tablename where columnname like '%' - one or more 
+
+SELECT * from tablename where columnname like '_' - one char only 
+
+--Aggregate functions
+select count(columnname) from tablename
+select max(columnname) from tablename
+select min(columnname) from tablename
+select avg(columnname) from tablename
+select sum(columnname) from tablename
+
+--Dual is a temporaty table
+select sysdate from dual;
+--Convertion Functions
+select to_char(sysdate,'YYYY-MM-DD') from dual;
+select to_date('2017-03-29','YYYY-MM-DD') from dual;
+
+--Numeric Functions
+Select ABS(1) from DUAL;
+Select ABS(-1)from DUAL;
+Select CEIL(2.83) from DUAL;
+Select CEIL(2.49) from DUAL;
+Select CEIL(-1.6)from DUAL;
+Select FLOOR(2.83) from DUAL;
+Select FLOOR(2.49) from DUAL;
+Select FLOOR(-1.6)from DUAL;
+Select ROUND(125.456, 1) from DUAL;
+Select ROUND(125.456, 0) from DUAL;
+Select ROUND(124.456, -1)from DUAL;
+Select TRUNC(140.234, 2) from DUAL;
+Select TRUNC(-54, 1) from DUAL;
+Select TRUNC(5.7) from DUAL;
+Select TRUNC(142, -1)from DUAL;
+
+--Varchar(String) Functions
+Select LOWER('Good Morning') from DUAL;
+Select UPPER('Good Morning') from DUAL;
+Select INITCAP('GOOD MORNING') from DUAL;
+Select LTRIM ('Good Morning', 'Good') from DUAL;
+Select RTRIM ('Good Morning', ' Morning') from DUAL;
+Select TRIM ('o' FROM 'Good Morning')from DUAL;
+Select SUBSTR ('Good Morning', 6, 7) from DUAL;
+Select LENGTH ('Good Morning') from DUAL;
+Select LPAD ('Good', 6, '*') from DUAL;
+Select RPAD ('Good', 6, '*')from DUAL;
+
+--Date Functions Functions
+Select ADD_MONTHS ('16-Sep-81', 3) from DUAL;
+Select MONTHS_BETWEEN ('16-Sep-81', '16-Dec-81') from DUAL;
+Select NEXT_DAY ('01-Jun-08', 'Wednesday') from DUAL;
+Select LAST_DAY ('01-Jun-08')from DUAL;
+
+insert- insert into tablename values (columnname value)
+
+INSERT ALL
+  INTO mytable (column1, column2, column_n) VALUES (expr1, expr2, expr_n)
+  INTO mytable (column1, column2, column_n) VALUES (expr1, expr2, expr_n)
+  INTO mytable (column1, column2, column_n) VALUES (expr1, expr2, expr_n)
+SELECT * FROM dual;
+
+                        update -UPDATE table
+SET column1 = expression1,
+    column2 = expression2
+
+delete - DELETE FROM table
+[WHERE conditions]
+
+
+CREATE USER Trainer - username
+  IDENTIFIED BY Syntel123 -password
+
+grant create session to user
+
+grant select on system.tablename to user
+
+revoke select on system.tablename from user
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
