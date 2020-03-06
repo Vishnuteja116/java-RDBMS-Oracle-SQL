@@ -1,0 +1,39 @@
+clauses in oracle
+where limit rows
+having limit groups
+group by ascending order
+order by asc or desc
+comes last in the select statement
+aggregate functions
+max
+min
+sum
+count
+stddev
+variance
+avg
+clause eliminate duplicate rows distinct
+select max(sal) as "Maximum" from emp;
+select min(sal) as "Minimum" from emp;
+select sum(sal) as "SUM" from emp;
+select avg(sal) as "AVERAGE" from emp;
+select count(*) from emp;
+select count(sal) from emp;
+select count(distinct sal) from emp;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

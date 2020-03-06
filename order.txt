@@ -1,0 +1,8 @@
+order by clause
+asc(default)
+desc 
+select id,city,name,sal from emp order by city;
+numbers 0-9
+alphabets a-z
+select id,city,name,sal from emp order by city asc,
+sal desc;

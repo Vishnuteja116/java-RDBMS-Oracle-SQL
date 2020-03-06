@@ -1,0 +1,39 @@
+/// FOREIGN KEY CONSTRAINT
+PARENT TABLE
+create table emp121(eid number primary key,
+ename varchar2(20));
+insert into emp121 values(1,'arun');
+insert into emp121 values(2,'ajay');
+ select * from emp121;
+////
+CHILD TABLE
+create table dept121(eid number
+references emp121(eid),dname varchar2(20));
+insert into dept121 values(1,'account');
+insert into dept121 values(2,'hr');
+ select * from dept121;
+insert into dept121 values(3,'admin');//violation
+delete from emp121 where eid=1;//violation
+///
+Unique constraint
+create table bank2(bid number unique,bname varchar2(20));
+insert into bank2 values(1,'icici');
+insert into bank2 values(null,'ciiti');
+insert into bank2 values(1,'hdfc');//violation
+////
+Not null constraint
+create table bank2(bid number not null,bname varchar2(20));
+insert into bank2 values(1,'icici');
+insert into bank2 values(null,'ciiti');//violation
+////
+Check Constraint
+create table bank1(bid number primary key,
+bname varchar2(20),salary number check(salary>5000));
+insert into bank1 values(1,'icici',6000);
+insert into bank1 values(2,'hdfc',5000);//violation
+/////
+Primary key constraint
+create table bank1(bid number primary key,bname varchar2(20));
+insert into bank1 values(1,'sbi');
+insert into bank1 values(1,'hdfc');//VIOLATION
+insert into bank1 values(null,'citi');//VIOLATION

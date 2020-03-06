@@ -1,0 +1,19 @@
+create table products(pid number,pname varchar2(20));
+insert into products values(1,'nokia');
+insert into products values(2,'samsung');
+insert into products values(3,'lg');
+insert into products values(4,'orion');
+insert into products values(5,'motorola');
+
+create table orders(pid number,pname varchar2(20));
+insert into orders values(1,'nokia');
+insert into orders values(2,'samsung');
+insert into orders values(3,'lg');
+insert into orders values(4,'smart');
+insert into orders values(5,'unior');
+
+
+select * from products union select * from orders;
+select * from products union all select * from orders;
+select * from products intersect select * from orders;
+select * from products minus select * from orders;

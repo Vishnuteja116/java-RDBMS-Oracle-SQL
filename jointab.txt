@@ -1,0 +1,20 @@
+create table emp541(eid number,ename varchar2(20),
+mid number,salary number);
+
+insert into emp541 values(31,'john',33,24000);
+insert into emp541 values(33,'ajay',null,1200);
+insert into emp541 values(33,'vijay',34,1300);
+insert into emp541 values(34,'ram',33,1500);
+insert into emp541 values(34,'raja',33,1600);
+insert into emp541 values(null,'sai',34,18000);
+
+select * from emp541;
+
+create table dept541(eid number,dname varchar2(20));
+insert into dept541 values(31,'sales');
+insert into dept541 values(33,'engg');
+insert into dept541 values(34,'account');
+insert into dept541 values(35,'hr');
+select * from dept541;
+
+

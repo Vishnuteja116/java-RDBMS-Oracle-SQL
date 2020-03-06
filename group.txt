@@ -1,0 +1,11 @@
+create table emp(id number,name varchar2(20),dept 
+varchar2(20),sal number,city varchar2(20),tax number);
+
+insert into emp values(1,'ramesh','admin',2300,'chn',100);
+insert into emp values(2,'ram','nss',1300,'blore',120);
+insert into emp values(3,'vijay','admin',2300,'delhi',230);
+insert into emp values(4,'siva','nss',1300,'blore',140);
+insert into emp values(5,'ram','it',2300,'chn',320);
+insert into emp values(6,'john','it',1300,'chn',190);
+
+

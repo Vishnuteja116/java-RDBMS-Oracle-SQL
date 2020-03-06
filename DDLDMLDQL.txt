@@ -1,0 +1,27 @@
+create table vehicle(vid number,vname varchar2(20))
+insert into vehicle values(1,'audi');
+insert into vehicle values(2,'bmw');
+insert into vehicle values(3,'benz');
+select * from vehicle;
+delete from vehicle where vid=1;
+select * from vehicle;
+rollback;
+select * from vehicle;
+alter table vehicle add(salary number(20));
+describe vehicle;
+alter table vehicle modify(salary number(25));
+describe vehicle;
+alter table vehicle rename column salary to sal;
+describe vehicle;
+alter table vehicle drop column sal;
+describe vehicle;
+update set vname='maruti'where vid=1;
+select * from vehicle;
+truncate table vehicle;
+describe vehicle;
+drop table vehicle;
+select * from vehicle;
+rename vehicle to veh;
+
+
+

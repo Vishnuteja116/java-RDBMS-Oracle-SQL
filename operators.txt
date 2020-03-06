@@ -1,0 +1,17 @@
+select name from emp where sal=2300;
+select name from emp where sal<>2300;
+select name from emp where sal>1300;
+select name from emp where sal>=1300;
+select name from emp where sal<2300;
+select name from emp where sal<=1300;
+select name from emp where name like 'r%';
+select name from emp where name not like 'r%';
+select name from emp where name like '_a%';
+select name from emp where name in('john','ajay');
+select name from emp where name not in('john','ajay');
+select name from emp where sal between 1000 and 2300;
+select name from emp where sal not between 100 and 1300;
+select name from emp where id=4 and city='chn';
+select name from emp where id=3 or city='delhi';
+select name from emp where not city='hyd';
+ select name || city as "Result" from emp;

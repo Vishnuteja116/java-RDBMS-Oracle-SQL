@@ -1,0 +1,19 @@
+cascading constraints
+on delete cascade clause
+PARENT TABLE
+create table emp123(eid number primary key,
+ename varchar2(20));
+insert into emp123 values(1,'arun');
+insert into emp123 values(2,'ajay');
+ select * from emp123;
+////
+CHILD TABLE
+create table dept123(eid number
+references emp123(eid)on delete cascade,
+dname varchar2(20));
+insert into dept123 values(1,'account');
+insert into dept123 values(2,'hr');
+select * from dept123;
+
+delete from emp123 where eid=1;
+//it will remove values from both tables.

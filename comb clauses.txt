@@ -1,0 +1,25 @@
+when group by clause is used?
+order of execution clauses 
+////
+group by
+select dept from emp group by dept
+////
+group by+having
+select city,sum(sal) from emp
+group by city
+having sum(sal)>2000;
+////
+group by+ having+where
+select city,sum(sal) from emp
+where city='blore'
+group by city
+having sum(sal)>2000;
+/////
+group by+having+where+order by
+select name,sum(sal) from emp
+where tax>150
+group by name
+having sum(sal)>2000
+order by name desc
+ ;
+///

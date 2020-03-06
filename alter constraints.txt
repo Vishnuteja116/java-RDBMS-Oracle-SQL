@@ -1,0 +1,15 @@
+constraints
+column level constraints using create command
+table level constraints using alter command
+alter table emp121 add constraint p1 primary key(eid);
+alter table emp121 drop constraint p1;
+alter table emp121 add constraint c1 unique(eid);
+create table dept121(did number,dname varchar2(20),sal
+number);
+alter table dept121 add constraint s1 
+check(sal in(5000,6000));
+insert into dept121 values(1,'john',7000);//violation
+insert into dept121 values(1,'john',5000);
+create table location1(lid number,lname varchar2(20))
+alter table emp121 modify lid not null
+
